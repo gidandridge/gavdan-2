@@ -56,7 +56,10 @@ S <da>:<da>:... - [S]tore hex data <da> at the monitor prompt address
 
 The ROM also contains a ported copy of Lee Davison's EhBasic (Enhanced Basic) for the 6502 CPU. The version used is 2.22p5 a patched and bug fixed version found in Klaus Dormann's GitHub repository https://github.com/Klaus2m5/6502_EhBASIC_V2.22.
 
-Lee Davison's orignal website is no longer online but has been reproduced by Hans Otten. Hans' site contains Lee's orignal reference material and a full manual for EhBasic http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/enhanced-6502-basic/
+Lee Davison's orignal website is no longer online but has been reproduced by Hans Otten. Hans' site contains Lee's orignal reference material and a full manual for EhBasic http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/enhanced-6502-basic/.
+
+## Schematics
+Full circuit schematics are included. These have been produced in Kicad and make good use of the 6502 Kicad library by Nicholas Parks Young located in his GitHub repository https://github.com/Alarm-Siren/6502-kicad-library. The library provides a range of symbols for the 6502 microprocessor and associated ecosystem.
 
 ## What about the GAVDAN-1
 The original GAVDAN-1 was a prototype built on a solderless breadboard and no longer exists.
