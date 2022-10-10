@@ -14,7 +14,7 @@ The main functions of the two boards are as follows:
 - Board 2 – 6522  VIA, 6551 ACIA
 
 ## Hardware
-The GAVDAN-2 is built around the 6502 CPU, has 32KB of static RAM and a 16KB EPROM that holds the DANMON monitor ROM code and a ported copy of Lee Davison’s EhBASIC. There is a 6522 Versatile Interface Adapter to allow the connection of external peripherals and a 6522 Asynchronous Communications Interface Adapter for serial I/O.
+The GAVDAN-2 is built around the 6502 CPU, has 32KB of static RAM and a 16KB EPROM that holds the DANMON monitor ROM code and a ported copy of Lee Davison’s EhBASIC. There is a 6522 Versatile Interface Adapter to allow the connection of external peripherals and a 6551 Asynchronous Communications Interface Adapter for serial I/O.
 
 The clock is a 1Mhz crystal oscillator.
 
@@ -60,6 +60,11 @@ Lee Davison's orignal website is no longer online but has been reproduced by Han
 
 ## Schematics
 Full circuit schematics are included. These have been produced in Kicad and make good use of the 6502 Kicad library by Nicholas Parks Young located in his GitHub repository https://github.com/Alarm-Siren/6502-kicad-library. The library provides a range of symbols for the 6502 microprocessor and associated ecosystem.
+
+## 3D Encasement
+3D printable STL files are included. These have been designed for use on a typical FDM printer using PLA. They comprise a base unit with space for the GAVDAN-2 logo indented and a separate logo file. Print each STL in differing colours then press the components of the logo into the base unit.
+
+The base unit is designed to hold four 9cm by 15cm PCB prototyping boards in a vertical arrangement. However due to the depth of some components it may only be possible to fit two boards into the current version of this encasement. I plan to create a revised version to solve this shortcoming.
 
 ## What about the GAVDAN-1
 The original GAVDAN-1 was a prototype built on a solderless breadboard and no longer exists.
