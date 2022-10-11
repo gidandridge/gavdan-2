@@ -1,12 +1,12 @@
 # GAVDAN-2
-Assembly code and other supporting files for the GAVDAN-2 retro 6502 micro computer.
+Assembly code and other supporting files for the GAVDAN-2 retro 6502 microcomputer.
 
 ## Overview
-The GAVDAN-2 is a 6502 micro computer inspired by the 1970s homebrew micro computer scene.
+The GAVDAN-2 is a 6502 microcomputer inspired by the 1970s homebrew microcomputer scene.
 
-I wanted to design and build a small micro computer that would closely resemble the type of machine built by home enthusiasts around the mid 1970s. Using mostly era specific components and construction methods.
+I wanted to design and build a small microcomputer that would closely resemble the type of machines built by home enthusiasts around the mid 1970s. Using mostly era specific components and construction methods.
 
-The micro's name GAVDAN-2 is a contraction of my own name and a suffixed model number. The current version, model 2, is built on two 9cm by 15cm PCB prototyping boards with the circuit soldered using AWG 28 wire.
+The microcomputer's name GAVDAN-2 is a contraction of my own name and a suffixed model number. The current version, model 2, is built on two 9cm by 15cm PCB prototyping boards with the circuit soldered using AWG 28 wire.
 
 The main functions of the two boards are as follows:
 
@@ -18,7 +18,7 @@ The GAVDAN-2 is built around the 6502 CPU, has 32KB of static RAM and a 16KB EPR
 
 The clock is a 1Mhz crystal oscillator.
 
-The power and reset circuit consists of a 555 timer circuit in monostable mode. This generates a single pulse either at power on, or when the reset button is pressed. This pulse is fed to the reset line on the micro’s bus.
+The power and reset circuit consists of a 555 timer circuit in monostable mode. This generates a single pulse either at power on, or when the reset button is pressed. This pulse is fed to the reset line on the microcomputer’s bus.
 
 Address decoding is done using 74LS series TTL logic gate IC’s.
 
@@ -28,7 +28,7 @@ The GAVDAN-2 uses a 6502 CPU capable of addressing a total of 65535 memory locat
 The hardware is mapped into the address space in the following manner:
 
 ```
-Base Address      Address mask		     Usage
+Base Address      Address Mask         Usage
 (HEX)             (Binary)
 -------------     ----------------     -----   
 C000 to FFFF      11xxxxxxxxxxxxxx     16KB ROM
@@ -38,7 +38,7 @@ BFEC to BFEF      10111111111011xx     6551 ACIA (4 registers)
 0000 to 7FFF      0xxxxxxxxxxxxxxx     32KB RAM
 ```
 
-The micro’s address decoding logic uses the address masks to determine when to enable the selected hardware. The TTL logic gates determine when each bit pattern is present and enables the relevant chip select lines on each IC.
+The microcomputer’s address decoding logic uses the address masks to determine when to enable the selected hardware. The TTL logic gates determine when each bit pattern is present and enables the relevant chip select lines on each IC.
 
 ## ROM
 The ROM contains code for a basic monitor ROM named DANMON. The name is a contraction of my own surname and the word "monitor". The monitor consists of code for some basic I/O routines such as sending and receiving data via the 6551 ACIA and also provides a simple command line interface with the following commands:
