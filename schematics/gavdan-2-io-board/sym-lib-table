@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "65xx")(type "Legacy")(uri "${KIPRJMOD}/65xx.lib")(options "")(descr ""))
+  (lib (name "MAX233CPP_G36")(type "Legacy")(uri "${KIPRJMOD}/MAX233CPP_G36.lib")(options "")(descr ""))
 )
