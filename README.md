@@ -10,8 +10,8 @@ The microcomputer's name GAVDAN-2 is a contraction of my own name and a suffixed
 
 The main functions of the two boards are as follows:
 
-- Board 1 – Reset circuit, Clock, 6502 CPU, RAM and ROM
-- Board 2 – 6522  VIA, 6551 ACIA
+- Board 1 (Main Board) – Reset circuit, Clock, 6502 CPU, RAM and ROM
+- Board 2 (IO Board) – 6522  VIA, 6551 ACIA
 
 ## Hardware
 The GAVDAN-2 is built around the 6502 CPU, has 32KB of static RAM and a 16KB EPROM that holds the DANMON monitor ROM code and a ported copy of Lee Davison’s EhBASIC. There is a 6522 Versatile Interface Adapter to allow the connection of external peripherals and a 6551 Asynchronous Communications Interface Adapter for serial I/O.
@@ -21,6 +21,56 @@ The clock is a 1Mhz crystal oscillator.
 The power and reset circuit consists of a 555 timer circuit in monostable mode. This generates a single pulse either at power on, or when the reset button is pressed. This pulse is fed to the reset line on the microcomputer’s bus.
 
 Address decoding is done using 74LS series TTL logic gate IC’s.
+
+Board 1 (Main Board) comprises the following bill of materials:
+```
+Reference(s)     Type                    Value/Part
+------------     ----                    ----------
+1MHZ1            Oscillator              1MHZ Crystal MCO-1510A
+C1               Capacitor               .1uF
+C2               Capacitor               .01uF
+C3               Polarized Capacitor     10uF
+C4               Capacitor               .1uF
+C5               Capacitor               .1uF
+C6               Capacitor               .1uF
+D1               LED                     Red Power LED
+JP1              Bridged Jumper          Clock Jumper
+R1               Resistor                1M
+R2               Resistor                270ohm
+R3               Resistor                3K
+R4               Resistor                47K
+R5               Resistor                1K
+R6               Resistor                3.3M
+R7               Resistor                3.3M
+R8               Resistor                3.3M
+R9               Resistor                3K
+SW1              Switch                  SW_MEC_5G
+U1               IC                      NE555P
+U2               IC                      74LS04
+U3               IC                      6502 CPU
+U4               IC                      CY62256-70PC RAM
+U5               IC                      74LS00
+U6               IC                      27C128 ROM
+```
+
+Board 2 (IO Board) comprises the following bill of materials:
+```
+Reference(s)     Type                    Value/Part
+------------     ----                    ----------
+C1               Capacitor               .1uF
+C2               Capacitor               33pF
+C3               Capacitor               .1uF
+J1               Connector               DB9 Female
+R1               Resistor                1M
+U1               IC			 74LS04
+U2               IC                      74LS133
+U3               IC                      74LS08
+U4               IC                      74LS08
+U5               IC                      6551 ACIA
+U6               IC                      MAX233CPP
+U7               IC                      6522 VIA
+Y1               Oscillator              1.8432MHZ Crystal
+```
 
 ## Memory Map
 The GAVDAN-2 uses a 6502 CPU capable of addressing a total of 65535 memory location each storing 8 bits of data.
