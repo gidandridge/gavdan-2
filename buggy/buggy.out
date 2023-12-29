@@ -1,0 +1,47 @@
+Sections:
+section seg6000 (attr=<acrwx> align=1):
+    6000: symbol: forward EXPR(24576=0x6000) UNUSED ABS 
+    6000: data(2): a9 11 
+    6002: data(3): 8d f1 bf 
+    6005: data(3): 20 36 60 
+    6008: data(3): 4e f1 bf 
+    600b: data(3): 20 36 60 
+    600e: data(3): 4e f1 bf 
+    6011: data(3): 20 36 60 
+    6014: data(3): 4e f1 bf 
+    6017: data(3): 20 36 60 
+    601a: data(1): 60 
+    601b: symbol: backward EXPR(24603=0x601b) UNUSED ABS 
+    601b: data(2): a9 88 
+    601d: data(3): 8d f1 bf 
+    6020: data(3): 20 36 60 
+    6023: data(3): 0e f1 bf 
+    6026: data(3): 20 36 60 
+    6029: data(3): 0e f1 bf 
+    602c: data(3): 20 36 60 
+    602f: data(3): 0e f1 bf 
+    6032: data(3): 20 36 60 
+    6035: data(1): 60 
+    6036: symbol: delay EXPR(24630=0x6036) ABS 
+    6036: data(2): a2 03 
+    6038: symbol: loop2 EXPR(24632=0x6038) ABS 
+    6038: data(2): a0 80 
+    603a: symbol: loop3 EXPR(24634=0x603a) ABS 
+    603a: data(1): 88 
+    603b: data(2): d0 fd 
+    603d: data(1): ca 
+    603e: data(2): d0 f8 
+    6040: data(1): 60 
+Symbols:
+loop3 EXPR(24634=0x603a) ABS 
+loop2 EXPR(24632=0x6038) ABS 
+backward EXPR(24603=0x601b) UNUSED ABS 
+delay EXPR(24630=0x6036) ABS 
+forward EXPR(24576=0x6000) UNUSED ABS 
+VIA_DDRA EXPR(49139=0xbff3) UNUSED EQU 
+VIA_DDRB EXPR(49138=0xbff2) UNUSED EQU 
+VIA_PortA EXPR(49137=0xbff1) EQU 
+VIA_PortB EXPR(49136=0xbff0) UNUSED EQU 
+__RPTCNT EXPR(-1=0xffff) INTERNAL 
+__VASM EXPR(0=0x0) INTERNAL 
+__UNIXFS EXPR(0=0x0) INTERNAL 
